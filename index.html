@@ -1,0 +1,166 @@
+<!-- Question - Pop the ballon by moving your mouse up and down over them -->
+
+
+<!DOCTYPE html>
+<html>
+    <title>Pooping the ballons</title>
+    <head>
+        <style>
+             body{
+            background:#ededed;
+          }
+          
+          .container{
+              max-width: 690px;
+              margin: 0 auto;
+          }
+          
+          h1{
+              margin: auto;
+              margin-top: 50px;
+              margin-bottom: 50px;
+              color: #08a3d9;
+              text-transform: uppercase;
+              font-size: 30px;
+              color: #000380;
+          }
+          #ballon-gallery div{
+              background: black;
+              height: 121px;
+              width: 119px;
+              text-align: center;
+              color:blue;
+              font-size: 40px;
+              font-family: sans-serif, arial;
+              border-radius: 100%;
+              margin-top: 20px;
+              display: inline-block;
+              /* float: left; */
+              margin: 2.5px 5 px 2.5px 0px;
+          }
+          #ballon-gallery div:nth-child(3n){
+              background: #ffce00;
+              color: #ffce00;
+          }
+          #ballon-gallery div:nth-child(3n-1){
+              background:#3f7abe;
+              color:#3f7abe;
+          }
+          #ballon-gallery div:nth-child(5n){
+              background:#8e7a8e;
+              color:#8e7a8e;
+          }
+          #ballon-gallery div:nth-child(13){
+              background:#8e7a8e;
+              color:#8e7a8e;
+          }
+          #ballon-gallery div:nth-child(10n){
+              background:#ff3300;
+              color: #ff3300;
+          }
+          
+          #ballon-gallery div:nth-child(4n){
+              clear:right;
+          }
+          #no-ballons {
+              display:none;
+              color:#ff3300;
+              font-size:100px;
+          }
+          .blue{
+            color:blue;
+          } 
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+              <h1>POP THE BALLOONS BY MOVING<br>YOUR MOUSE OVER THEM</h1>
+              <div id="no-ballons"><span class="blue">Wow!</span> All balloons popped!</div>
+              <div id="ballon-gallery">
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+                      <div class="balloon"></div>
+              </div>
+            </div>
+          </div>
+         <script>
+          function Show() {
+            for(var i = 0; i < 24; i++)
+            {
+                document.getElementById("ballon-gallery").children[i].style.opacity="1";
+                console.log(i);
+            }
+            // document.getElementById("ballon-gallery").children[1].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[3].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[5].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[7].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[9].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[11].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[13].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[15].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[17].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[19].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[21].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[23].style.opacity="1";
+            // document.getElementById("ballon-gallery").children[26].style.opacity="1";
+          
+          }
+          function Hide() {
+            for(var j = 0; j < 24; j++)
+            {
+                document.getElementById("ballon-gallery").children[j].style.opacity="-12";
+                console.log(j);
+            }
+            // document.getElementById("ballon-gallery").children[1].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[3].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[5].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[7].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[9].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[11].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[13].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[15].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[17].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[19].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[21].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[23].style.opacity="-12";
+            // document.getElementById("ballon-gallery").children[26].style.opacity="-12";
+          }
+
+        document.addEventListener("mouseenter",Hide);
+        document.addEventListener("mouseleave",Show);
+
+       var obj = document.getElementById("no-ballons");
+        function popmsg() {
+            document.getElementById('no-ballons').style.display="inline-block";
+        } 
+        function outmsg() {
+            document.getElementById('no-ballons').style.display="none";
+        } 
+
+        document.addEventListener("mouseenter",popmsg);
+        document.addEventListener("mouseleave",outmsg);
+        </script>
+    </body>
+</html>
